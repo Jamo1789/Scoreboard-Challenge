@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset='utf-8'>
+	<link href="table.css" rel="stylesheet" type="text/css">
+    <title>Highscore Table</title>
+    <script type="text/javascript" src="sort-table.js"></script>
+	
+    <style type="text/css">
+        table { border: 1px solid black; border-collapse: collapse; }
+
+        th, td { padding: 2px 5px; border: 1px solid black; }
+
+        thead { background: #ddd; }
+
+        table#demo2.js-sort-0 tbody tr td:nth-child(1),
+        table#demo2.js-sort-1 tbody tr td:nth-child(2),
+        table#demo2.js-sort-2 tbody tr td:nth-child(3),
+        table#demo2.js-sort-3 tbody tr td:nth-child(4),
+        table#demo2.js-sort-4 tbody tr td:nth-child(5),
+        table#demo2.js-sort-5 tbody tr td:nth-child(6),
+        table#demo2.js-sort-6 tbody tr td:nth-child(7),
+        table#demo2.js-sort-7 tbody tr td:nth-child(8),
+        table#demo2.js-sort-8 tbody tr td:nth-child(9),
+        table#demo2.js-sort-9 tbody tr td:nth-child(10) {
+            background: #dee;
+        }
+    </style>
+	 <script>
+            
+            function addRow()
+            {
+                // get input values
+               
+                 var Points = document.getElementById('Points').value;
+                  var Name = document.getElementById('Name').value;
+                  
+                  // get the html table
+                  // 0 = the first table
+                  var table = document.getElementsByTagName('table')[0];
+                  
+                  // add new empty row to the table
+                  // 0 = in the top 
+                  // table.rows.length = the end
+                  // table.rows.length/2+1 = the center
+                  var newRow = table.insertRow(1);
+                  
+                  // add cells to the row
+                  var cel1 = newRow.insertCell(0);
+                  var cel2 = newRow.insertCell(1);
+                 
+                  
+                  // add values to the cells
+                  
+                  cel1.innerHTML = Points;
+                  cel2.innerHTML = Name;
+            }
+            
+        </script>
+</head>
+<body>
+<header>
+    <h1>Highscore Table demo</h1>
+</header>
+        
+      
+
+    <h2>2. Scoreboard Challenge, No back end</h2>
+    <p>Scoreboard demo. Press the column headings "Points" and "Name" to sort the results.</p>
+    <form>
+        <table class="js-sort-table" id="demo3">
+            <thead>
+           
+            <tr>
+                
+                <th class="js-sort-number" title="class=&quot;js-sort-number&quot;">Points</th>
+                <th class="js-sort-string" title="class=&quot;js-sort-string&quot;">Name</th>
+               
+            </tr>
+            </thead>
+            <tbody>
+			
+            <tr>
+                
+                <td>10000</td>
+                <td>AAA</td>
+               
+               
+            </tr>
+            <tr>
+                
+                <td>9000</td>
+                <td>BBB</td>
+               
+               
+            </tr>
+            <tr>
+                
+                <td>8000</td>
+                <td>CCC</td>
+             
+                
+            </tr>
+            <tr>
+                
+                <td>7000</td>
+                <td>DDD</td>
+          
+            </tr>
+            <tr>
+                
+                <td>7000</td>
+                <td>EEE</td>
+        
+            </tr>
+            <tr>
+                
+                <td>6000</td>
+                <td>FFF</td>
+          
+             
+            </tr>
+            </tbody>
+        </table>
+
+       <br></br>
+            
+                
+				
+</button>
+            
+       
+    </form>
+	Points: <input type="text" name="Points" id="Points" /><br/><br/>
+        Name: <input type="text" name="Name" id="Name" /><br/><br/>
+        <button onclick="addRow();">Add score</button><br/><br/>
+
+</section>
+
+<footer>
+</footer>
+</body>
+</html>
+
